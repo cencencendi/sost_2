@@ -5,7 +5,7 @@
 #include <linux/kernel.h>	/* Needed for KERN_INFO */
 #include <linux/init.h>		/* Needed for the macros */
 
-MODULE_LICENSE_("GPL");
+MODULE_LICENSE("GPL");
 
 static int __init hello_3_init(void)
 {
