@@ -1,3 +1,4 @@
+CONFIG_MODULE_SIG=n
 obj-m += hello-3.o
 
 all:
