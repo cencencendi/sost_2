@@ -1,16 +1,18 @@
 CONFIG_MODULE_SIG=n
-	
-TARGET  := hellokernel
-WARN    := -W -Wall -Wstrict-prototypes -Wmissing-prototypes
-INCLUDE := -isystem /lib/modules/`uname -r`/build/include
-CFLAGS  := -O2 -DMODULE -D__KERNEL__ ${WARN} ${INCLUDE}
-CC      := gcc-3.0
+obj-m += hello-3.o
 
-${TARGET}.o: ${TARGET}.c
-
-.PHONY: clean
+all:
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	rm *.o *.symvers *.order *.mod.c
 
 clean:
-    rm -rf ${TARGET}.o
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
+insmod:
+	sudo insmod ./hello-3.ko
 
+rmmod:
+	sudo rmmod hello-3
+
+showmessage:
+	cat /var/log/syslog
