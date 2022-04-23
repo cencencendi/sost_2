@@ -12,7 +12,7 @@ MODULE_LICENSE("GPL");
 
 static int __init hello_3_init(void)
 {
-	printk(KERN_INFO "Hello! My name is Cendikia Ishmatuka Srihascaryasmoro (19/439607/TK/48337)\n");
+	printk(KERN_INFO "Cendikia Ishmatuka Srihascaryasmoro (19/439607/TK/48337)\n");
 	return 0;
 }
 
