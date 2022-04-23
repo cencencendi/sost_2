@@ -5,8 +5,8 @@
 #include <linux/kernel.h>	/* Needed for KERN_INFO */
 #include <linux/init.h>		/* Needed for the macros */
 
-#define DRIVER_AUTHOR "Someone"
-#define DRIVER_DESC   "Project 2 Sistem Operasi pada Sistem Tertanam"
+#define DRIVER_AUTHOR "cendikia.i@mail.ugm.ac.id"
+#define DRIVER_DESC   "SOST Project 2"
 
 MODULE_LICENSE("GPL");
 
@@ -18,7 +18,7 @@ static int __init hello_3_init(void)
 
 static void __exit hello_3_exit(void)
 {
-	printk(KERN_INFO "Goodbye, world 3\n");
+	printk(KERN_INFO "Once again, my name is Cendikia Ishmatuka S rihascaryasmoro (19/439607/TK/48337)\n\n Nice to meet you!");
 }
 
 module_init(hello_3_init);
