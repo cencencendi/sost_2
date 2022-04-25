@@ -4,7 +4,7 @@
 #include <string.h>
 #include <malloc.h>
 
-#define DEVICE "punyacendi"
+#define DEVICE "/dev/punyacendi"
 
 int fd = 0;
 int ppos = 0;
