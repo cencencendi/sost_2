@@ -4,7 +4,7 @@
 #include <string.h>
 #include <malloc.h>
 
-#define DEVICE "/dev/airlangga"
+#define DEVICE "punyacendi"
 
 int fd = 0;
 int ppos = 0;
