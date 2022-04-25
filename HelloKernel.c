@@ -14,7 +14,7 @@
  */
 
 #define SUCCESS 0
-#define DEVICE_NAME "airlangga"	/* Dev name as it appears in /proc/devices   */
+#define DEVICE_NAME "punyacendi"	/* Dev name as it appears in /proc/devices   */
 #define BUF_LEN 80		/* Max length of the message from the device */
 #define BUFFER_SIZE 1024
 
@@ -102,7 +102,7 @@ static int device_open(struct inode *inode, struct file *file)
 
 	Device_Open++;
 	//sprintf(msg, "I already told you %d times Hello world!\n", counter++);
-  	sprintf(msg, "Kernel module message written by Airlangga Fidiyanto (called %d times)\n", counter++);
+  	sprintf(msg, "Kernel module message written by Airlangga, Cendi, Akmalda (called %d times)\n", counter++);
 	msg_Ptr = msg;	
 	try_module_get(THIS_MODULE);
 
@@ -197,9 +197,9 @@ device_write(struct file *filp, const char *buff, size_t len, loff_t * off)
 	device_buffer[strcspn(device_buffer, "\n")] = 0;
 
 	if (strcmp(device_buffer, "get_nama") == 0) {
-		strcpy(stringToReturn,"Airlangga Rasyad Fidiyanto");
+		strcpy(stringToReturn,"Cendikia Ishmatuka S");
 	} else if (strcmp(device_buffer, "get_nim") == 0) {
-		strcpy(stringToReturn, "19/443562/TK/48758");
+		strcpy(stringToReturn, "19/439607/TK/48337    ");
 	} else {
 		strcpy(stringToReturn, "Invalid");
 	}
